@@ -6,9 +6,10 @@
 
     <div class="right-menu">
       <template v-if="device!=='mobile'">
+        <search id="header-search" class="right-menu-item" />
         <screenfull id="screenfull" class="right-menu-item hover-effect" />
       </template>
-      <el-dropdown class="avatar-container" trigger="click">
+      <el-dropdown class="avatar-container right-menu-item hover-effect" trigger="click">
         <div class="avatar-wrapper">
           <img :src="avatar+'?imageView2/1/w/80/h/80'" class="user-avatar">
           <i class="el-icon-caret-bottom" />
@@ -28,12 +29,14 @@ import { mapGetters } from 'vuex'
 import Breadcrumb from '@/components/Breadcrumb'
 import Hamburger from '@/components/Hamburger'
 import Screenfull from '@/components/Screenfull'
+import Search from '@/components/HeaderSearch'
 
 export default {
   components: {
     Breadcrumb,
     Hamburger,
-    Screenfull
+    Screenfull,
+    Search
   },
   computed: {
     ...mapGetters([

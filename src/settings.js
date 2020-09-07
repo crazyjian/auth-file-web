@@ -1,6 +1,6 @@
 module.exports = {
 
-  title: '认证文件协同平台',
+  title: '智慧认证协同平台',
 
   /**
    * @type {boolean} true | false
